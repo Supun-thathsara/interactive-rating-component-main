@@ -1,0 +1,228 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+
+
+:root{
+    --ff-primary: 'Overpass', sans-serif;
+    --width-mb:375px;
+    --width-dt:1440px;
+    --clr-primary:hsl(25, 97%, 53%);
+    --clr-Neutral-White: hsl(0, 0%, 100%);
+    --clr-Neutral-LightGrey: hsl(217, 12%, 63%);
+    --clr-Neutral-MediumGrey: hsl(216, 12%, 54%);
+    --clr-Neutral-circles: hsl(211, 20%, 22%);
+    --clr-Neutral-DarkBlue: hsl(213, 19%, 18%);
+    --clr-Neutral-VeryDarkBlue: hsl(216, 12%, 8%);
+    --fs-paragraph:15px;
+    --fw-bold:700;
+    --fw-normal:400;
+}
+
+body{
+    background: var(--clr-Neutral-VeryDarkBlue);
+    font-family: var(--ff-primary);
+    max-width: var(--width-dt);
+
+}
+.circle{
+    height: 50px;
+    width: 50px;
+    border-radius:50%;
+    background: var(--clr-Neutral-circles);
+    align-content: center;
+    border: none;
+    font-size: var(--fs-paragraph);
+    color:var(--clr-Neutral-LightGrey) ;
+    
+}
+.hidden{
+  display: none !important;
+  
+}
+
+.align-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Thank-you-svg{
+  height:10px;
+  margin-top: 40px;
+}
+.section-layout{
+    height: 410px;
+    max-width: 400px;
+    background: var(--clr-Neutral-DarkBlue);
+    display: grid;
+    gap: 1rem;
+    padding-left:30px;
+    padding-right: 30px;
+    border-radius: 2rem;
+   
+}
+
+.section-layout2{
+  height: 410px;
+  max-width: 400px;
+  background: var(--clr-Neutral-DarkBlue);
+  display: grid;
+  gap: 20px;
+  padding-left:30px;
+  padding-right: 30px;
+  border-radius: 2rem;
+ 
+}
+ .align-items-center{
+  margin: auto;
+ }
+
+@media (max-width:800px) {
+  body{
+    min-width: var(--width-mb);
+  }
+  .section-layout{
+    min-width: 370px;
+  }
+   
+}
+
+div [section-margin="top"]{
+  
+  margin-top: 45px;
+
+}
+div [section-margin="top-medium"]{
+  margin-top: 35px;
+  color:var(--clr-Neutral-White);
+  font-size: 28px;
+  font-weight: var(--fw-bold);
+  margin-left: 24%;
+
+}
+div [section-margin="center"]{
+  
+  margin-top: 20px;
+  margin-left: 18%;
+  
+}
+div [section-margin="top-low"]{
+  margin-top: 10px;
+  text-align: center;
+}
+.section-layout h1 {
+    color:var(--clr-Neutral-White);
+    font-weight: var(--fw-bold);
+    font-size: 28px;
+    
+}
+.section-layout p {
+    color:var(--clr-Neutral-LightGrey);
+    font-size: var(--fs-paragraph);
+    font-weight: var(--fw-normal);
+}
+.rating-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.special{
+  
+    background: var(--clr-primary) !important;
+    color: var(--clr-Neutral-White) !important;
+  
+}
+.top-circle{
+    margin-top:30px ;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius:50%;
+    background: var(--clr-Neutral-circles);
+    align-content: center;
+    border: none;
+    font-size: var(--fs-paragraph);
+    color:var(--clr-Neutral-LightGrey) ;
+}
+
+.info{
+    display: grid;
+    gap: 1.5;
+}
+.submit{
+    border-radius: 3rem;
+    padding: 5px;
+    margin-bottom: 35px;
+    border: none;
+    letter-spacing: 2px;
+    text-transform:uppercase;
+    background: var(--clr-primary);
+    color: var(--clr-Neutral-White);
+    text-align: center;
+    cursor: pointer;
+    }
+
+ .rating-buttons .circle {
+    cursor: pointer;
+ }   
+
+ .score{
+  color: var(--clr-primary);
+  background: var(--clr-Neutral-circles);
+  border-radius: 50px;
+  text-align-last:center;
+  padding: 7px 16px 5px 16px;
+  font-size: var(--fs-paragraph);
+  
+  
+  
+ }
+
+.rating-buttons .circle:hover,.rating-buttons .circle:focus-visible{
+    background: var(--clr-Neutral-LightGrey);
+    color: var(--clr-Neutral-White) ;
+}
+
+.submit:hover,.submit:focus-visible{
+    color: var(--clr-primary);
+    background: var(--clr-Neutral-White) ;
+}
